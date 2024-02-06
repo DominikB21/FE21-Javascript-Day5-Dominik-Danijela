@@ -8,10 +8,30 @@ let car = {
   }
 }
 
-console.log(car.fullSpec());
+//console.log(car.fullSpec());
+document.querySelector("#car").innerHTML = car.fullSpec();
 
 let animal = {
-  type: "Cat",
+  type: "cat",
   age: 3,
   color: "black",
+  fullInfo: function(){
+    return "The animal is a "+this.color+" "+this.type+" and is "+this.age+" years old."
+  }
 }
+
+//console.log(animal.fullInfo());
+document.querySelector("#animal").innerHTML = animal.fullInfo();
+
+let person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 32,
+  job: "IT",
+
+  fullDescription: function(){
+    return this.firstName+" "+this.lastName+" is "+this.age+" years old and works in "+this.job+"."
+  }
+}
+
+document.querySelector("#person").innerHTML = person.fullDescription();
